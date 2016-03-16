@@ -3,7 +3,7 @@ library(lubridate) # date library
 library(dplyr) # I love dplyr for the chaining and methods
 d1 <- ymd("2007-02-01")
 d2 <- ymd("2007-02-02")
-read_data = TRUE
+read_data = FALSE
 if (read_data) {
   #d1 <- ymd("2006-12-16")
   #d2 <- ymd("2006-12-16")
@@ -30,7 +30,5 @@ with(data_to_plot, {
   plot(Date+Time, Global_active_power,col = "black",
        ylab = "Global Active Power (kilowatts)",xlab="",type= "l",lwd=2)
   })
-dev.print(png, 'plot2.png', width = 480, height = 640)
+dev.print(png, 'plot2.png', width = 480, height = 480)
 
-#dev.copy(png, file = "plot2.png", width = 480, height = 640)
-#dev.off()
